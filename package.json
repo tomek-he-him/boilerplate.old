@@ -13,10 +13,9 @@
 , "devDependencies":
   { "?": "Run `npm install babel tap-spec` and save it here"
 
-  , "?": "Run `npm install del gulp gulp-babel` and save it here"
+  , "?": "Run `npm install del gulp gulp-babel gulp-help` and save it here"
   }
 
-, "main": "/dist.es5/index.js"
 , "files":
   [ "/*.js"
   , "/source/"
