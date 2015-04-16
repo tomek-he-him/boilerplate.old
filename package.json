@@ -14,12 +14,13 @@
   { "?": "Run `npm install babel tap-spec` and save it here"
 
   , "?": "Run `npm install del gulp gulp-babel gulp-help` and save it here"
+
+  , "?": "Run `npm install tape-catch` and save it here"
   }
 
 , "files":
-  [ "/*.js"
+  [ "/!(gulpfile).js"
   , "/source/"
-  , "/test/"
   , "/Readme.md"
   , "/License.md"
   ]
