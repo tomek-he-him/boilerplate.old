@@ -12,7 +12,7 @@
   }
 
 , "devDependencies":
-  { "?": "Run `npm install babel jshint nodangel tap-spec` and save it here"
+  { "?": "Run `npm install babel jshint nodangel tap-spec@2` and save it here"
 
   , "?": "Run `npm install del gulp gulp-babel gulp-help` and save it here"
 
