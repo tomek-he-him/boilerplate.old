@@ -6,12 +6,13 @@
   {}
 
 , "scripts":
-  { "test": "jshint && babel-node test.js | tap-spec"
+  { "develop": "nodangel --ignore node_modules --exec 'npm test'"
   , "prepublish": "gulp build"
+  , "test": "jshint && babel-node test.js | tap-spec"
   }
 
 , "devDependencies":
-  { "?": "Run `npm install babel jshint tap-spec` and save it here"
+  { "?": "Run `npm install babel jshint nodangel tap-spec` and save it here"
 
   , "?": "Run `npm install del gulp gulp-babel gulp-help` and save it here"
 
