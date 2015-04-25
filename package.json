@@ -21,7 +21,8 @@
 
 , "files":
   [ "/!(gulpfile).js"
-  , "/source/"
+  , "/module/"
+  , "/test/"
   , "/Readme.md"
   , "/License.md"
   ]
