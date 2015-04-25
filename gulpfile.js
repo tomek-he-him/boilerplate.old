@@ -15,7 +15,7 @@ gulp.task('build',
 // `gulp scripts`
 // -----------------------------------------------------------------------------
 var scripts = {
-  source: 'source/**/*.js',
+  source: 'module/**/*.js',
   target: '.'
 };
 
@@ -32,7 +32,10 @@ gulp.task('scripts',
 
 gulp.task('scripts:clean', false, function(done) {
   del([
-    scripts.target + '/index.{js,js.map}'
+    '!/module.js',
+    '!/gulpfile.js',
+    '!/test.js',
+    scripts.target + '/*.{js,js.map}'
   ], done);
 });
 
