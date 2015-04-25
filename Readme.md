@@ -33,7 +33,7 @@ Installation
 ------------
 
 ```sh
-$ …
+$ npm install …
 ```
 
 
