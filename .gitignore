@@ -12,8 +12,9 @@
 # - All files and directories starting with "#"
 \#*
 
-# - Automatically installed dependencies
+# - NPM stuff
 /node_modules/
+/npm-debug.log
 
 # - Test coverage reports
 /coverage/
