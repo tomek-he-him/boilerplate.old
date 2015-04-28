@@ -7,7 +7,7 @@
 /*.js
 !/gulpfile.js
 !/module.js
-!/text.js
+!/test.js
 
 # - All files and directories starting with "#"
 \#*
