@@ -1,4 +1,4 @@
-{ "name": "a"
+{ "name": "…"
 , "version": "0.0.0-work-in-progress"
 , "description": "…"
 
@@ -12,7 +12,7 @@
   , "coverage": "isparta cover test.js"
   , "develop": "nodangel --ignore node_modules --exec 'npm run test:lite'"
   , "prepublish": "npm run clean && npm run build"
-  , "test": "jshint && npm run test:lite"
+  , "test": "jshint . && npm run test:lite"
   , "test:lite": "babel-node test.js | tap-spec"
   }
 
