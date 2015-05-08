@@ -62,5 +62,8 @@
    */
 
   // Suppress warnings about == null comparisons.
-  "eqnull": true
+  "eqnull": true,
+
+  // Relax about comma-only lines. This is still valid airbnb style, BTW.
+  "laxcomma": true
 }
