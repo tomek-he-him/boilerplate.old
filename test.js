@@ -1,1 +1,1 @@
-import test from 'tape-catch';
+const test = require('tape-catch');
