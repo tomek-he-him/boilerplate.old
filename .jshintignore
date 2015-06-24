@@ -7,7 +7,9 @@
 /*.js
 !/module.js
 !/test.js
-/.es5/
+/*/
+!/module/
+!/test/
 
 # - All files and directories starting with "#"
 \#*
