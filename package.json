@@ -15,7 +15,7 @@
   , "test:transpile": "rm -rf .es5 && babel test.js module/*.js --out-dir .es5"
   , "transpile": "cd module && babel --out-dir ../ *.js"
   , "view-coverage": "echo 'Generating coverage reports...'; npm run coverage >/dev/null && echo '...done.' && xdg-open ./coverage/lcov-report/index.html >/dev/null"
-  , "_bootstrap": "npm install --save-dev babel coveralls istanbul jshint nodangel tap-spec@2 tape-catch format-json mve; npm run diffy-package; echo 'Dependencies saved. Now remove the script `_boilerplate` from the `package.json`. Seriously, NOW.'"
+  , "_bootstrap": "npm install --save-dev --save-exact babel coveralls istanbul jshint nodangel tap-spec@2 tape-catch format-json mve; npm run diffy-package; echo 'Dependencies saved. Now remove the script `_boilerplate` from the `package.json`. Seriously, NOW.'"
   }
 , "devDependencies": {}
 , "files":
