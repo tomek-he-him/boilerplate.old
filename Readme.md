@@ -30,6 +30,8 @@
 
 
 
+<div                                             id="/installation">&nbsp;</div>
+
 Installation
 ------------
 
@@ -40,6 +42,8 @@ $ npm install …
 
 
 
+<div                                                    id="/usage">&nbsp;</div>
+
 Usage
 -----
 
@@ -47,6 +51,8 @@ Usage
 
 
 
+
+<div                                                  id="/license">&nbsp;</div>
 
 License
 -------
