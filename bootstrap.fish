@@ -16,7 +16,7 @@ for file in ./package.json ./Readme.md
     -e "s/<\!--name-->/$name/g" \
     -e "s/<\!--description-->/$description/g" \
     -e "s/<\!--title-->/$title/g" \
-    -e 's/<\!--title-underline-->/'(echo -n $title | sed s/./=/)'/g' \
+    -e 's/<\!--title-underline-->/'(echo -n $title | sed s/./=/g)'/g' \
     $file
   end
 
