@@ -1,6 +1,6 @@
-{ "name": "…"
+{ "name": "<!--name-->"
 , "version": "0.0.0-work-in-progress"
-, "description": "…"
+, "description": "<!--description-->"
 , "dependencies": {}
 , "scripts":
   { "clean": "git reset && echo '/node_modules/' > .gitignore && git add .gitignore && git stash save --include-untracked --keep-index '`npm run clean` trash can' && git clean --force -d && git reset --hard && echo '\nclean: Uncommitted and ignored files have been moved to git’s stash. To restore them run `git stash pop --quiet; git checkout .gitignore`.'"
@@ -26,11 +26,11 @@
   ]
 , "license": "MIT"
 , "keywords":
-  [ "…"
+  [ "<!--keywords-->"
   ]
 , "author": "Tomek Wiszniewski <t.wiszniewski@gmail.com>"
 , "repository":
   { "type": "git"
-  , "url": "git@github.com:tomekwi/….git"
+  , "url": "git@github.com:tomekwi/<!--name-->.git"
   }
 }
