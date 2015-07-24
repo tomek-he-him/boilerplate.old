@@ -8,7 +8,6 @@
   , "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls"
   , "develop": "nodangel --ignore node_modules --ignore coverage --exec 'npm run --silent test:lite'"
   , "diffy-package": "format-json package.json > .temp; mve .temp package.json"
-  , "postversion": "npm run diffy-package"
   , "prepublish": "npm run --silent clean && npm run transpile"
   , "test": "jshint . && npm run test:transpile && node .es5/test.js | tap-spec"
   , "test:lite": "babel-node test.js | tap-spec"
