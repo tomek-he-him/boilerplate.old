@@ -22,4 +22,4 @@ for file in ./package.json ./Readme.md
 
 npm run _bootstrap
 
-rm ./bootstrap.sh
+rm ./bootstrap.fish
