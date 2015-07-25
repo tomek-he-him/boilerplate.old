@@ -30,6 +30,7 @@ and if test (count (git branch --list master)) -gt 0
   end
 and git checkout --orphan master
 and git commit -m 'Boom!'
+and git remote update --prune
 and git branch --set-upstream-to=origin/master
 and echo '…done.'
 or echo '…failed!'
