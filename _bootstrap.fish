@@ -36,10 +36,10 @@ or echo '…failed!'
 echo \n'Updating name and description…'
 for file in package.json Readme.md
   sed --in-place \
-    -e "s/<\!--name-->/$name/g" \
-    -e "s/<\!--description-->/$description/g" \
-    -e "s/<\!--title-->/$title/g" \
-    -e 's/<\!--title-underline-->/'(echo -n $title | sed s/./=/g)'/g' \
+    -e "s|<\!--name-->|$name|g" \
+    -e "s|<\!--description-->|$description|g" \
+    -e "s|<\!--title-->|$title|g" \
+    -e 's|<\!--title-underline-->|'(echo -n $title | sed s/./=/g)'|g' \
     -e "s|<\!--repo-->|$repo|g" \
     $file
   end
