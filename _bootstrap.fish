@@ -1,7 +1,10 @@
 #!/usr/bin/fish
 
-if test $argv[1] = '--help'
-  echo 'Usage ./bootstrap.sh NAME DESCRIPTION [TITLE]'
+if begin
+  test (count $argv) -lt 2
+  or test $argv[1] = '--help'
+end
+  echo: 'Usage ./_bootstrap.sh NAME DESCRIPTION [TITLE [REPO]]'
   exit 0
   end
 
@@ -9,13 +12,21 @@ set args $argv $argv[1]
 
 set name $args[1]
 set description $args[2]
-set title $args[3]
+
+if test -z $args[3]; set title $args[3]
+else; set title $name
+end
+
+if test -z $args[4]; set repo $args[4]
+else; set repo (echo git@github.com:tomekwi/$name)
+end
 
 echo 'Setting up the repo…'
-git branch -D master
+git remote rename origin boilerplate
+and git remote add origin $repo
+and git branch -D master
 and git checkout --orphan master
 and git commit -m 'Boom!'
-and git remote rename origin boilerplate
 and git push --set-upstream origin master
 and echo '…done.'
 
