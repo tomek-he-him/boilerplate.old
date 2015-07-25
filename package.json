@@ -32,6 +32,6 @@
 , "author": "Tomek Wiszniewski <t.wiszniewski@gmail.com>"
 , "repository":
   { "type": "git"
-  , "url": "git@bitbucket.com:tomekwi/<!--name-->.git"
+  , "url": "<!--repo-->"
   }
 }
