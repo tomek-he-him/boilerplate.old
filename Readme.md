@@ -22,7 +22,7 @@ Installation
 ------------
 
 ```sh
-$ npm install <!--name-->
+$ npm install <!--repo-->
 ```
 
 
