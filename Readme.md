@@ -22,3 +22,10 @@ $ git clone git@github.com:tomekwi/boilerplate <my project name>
 $ git checkout <boilerplate flavor – I normally go for `javascript`>
 $ ./_boilerplate.fish <name> <description> [<title> [<repo>]]
 ```
+
+
+3) Push your way forward!
+
+```sh
+$ git push --set-upstream origin master
+```
