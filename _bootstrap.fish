@@ -13,11 +13,11 @@ set args $argv $argv[1]
 set name $args[1]
 set description $args[2]
 
-if test -z $args[3]; set title $args[3]
+if test -n $args[3]; set title $args[3]
 else; set title $name
 end
 
-if test -z $args[4]; set repo $args[4]
+if test -n $args[4]; set repo $args[4]
 else; set repo (echo git@github.com:tomekwi/$name)
 end
 
