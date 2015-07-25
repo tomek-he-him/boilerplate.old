@@ -12,7 +12,7 @@
   , "test": "jshint . && npm run test:transpile && node .es5/test.js | tap-spec"
   , "test:lite": "babel-node test.js | tap-spec"
   , "test:transpile": "rm -rf .es5 && babel test.js module/*.js --out-dir .es5"
-  , "transpile": "cd module && babel --out-dir ../ *.js"
+  , "transpile": "babel module --out-dir ."
   , "view-coverage": "echo 'Generating coverage reports...'; npm run coverage >/dev/null && echo '...done.' && opn ./coverage/lcov-report/index.html >/dev/null"
   , "_bootstrap": "npm install --save-dev --save-exact babel coveralls istanbul jshint nodangel tap-spec@2 tape-catch format-json mve opn-cli; npm install json; json --in-place -f package.json -e 'delete this.scripts._bootstrap'; npm run diffy-package"
   }
