@@ -21,7 +21,7 @@ if test -n $args[4]; set repo $args[4]
 else; set repo (echo git@github.com:tomekwi/$name)
 end
 
-echo '\nSetting up the repo…'
+echo '\nDoing the initial commit…'
 git remote rename origin boilerplate
 and git remote add origin $repo
 and if test (count (git branch --list master)) -gt 0
@@ -30,8 +30,6 @@ and if test (count (git branch --list master)) -gt 0
   end
 and git checkout --orphan master
 and git commit -m 'Boom!'
-and git remote update --prune
-and git branch --set-upstream-to=origin/master
 and echo '…done.'
 or echo '…failed!'
 
