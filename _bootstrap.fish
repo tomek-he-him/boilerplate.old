@@ -45,21 +45,18 @@ for file in package.json Readme.md
     -e "s|<\!--repo-->|$repo|g" \
     $file
   end
-and git add --patch
 and git commit -m 'Update name and description' package.json Readme.md
 and echo '…done.'
 or echo '…failed!'
 
 echo '\nBootstrapping dependencies…'
 npm run _bootstrap
-and git add --patch
-and git commit -m 'Bootstrap dependencies'
+and git commit -m 'Bootstrap dependencies' package.json
 and echo '…done.'
 or echo '…failed!'
 
 echo '\nRemoving the bootstrap script…'
-rm _bootstrap.fish
-and git add --patch
+git rm _bootstrap.fish
 and git commit -m 'Remove the bootstrap script'
 and echo '…done.'
 or echo '…failed!'
