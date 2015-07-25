@@ -4,7 +4,7 @@ if begin
   test (count $argv) -lt 2
   or test $argv[1] = '--help'
 end
-  echo: 'Usage ./_bootstrap.sh NAME DESCRIPTION [TITLE [REPO]]'
+  echo 'Usage: ./_bootstrap.sh NAME DESCRIPTION [TITLE [REPO]]'
   exit 0
   end
 
