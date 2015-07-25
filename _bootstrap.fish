@@ -26,13 +26,15 @@ git remote rename origin boilerplate
 and git remote add origin $repo
 and if test (count (git branch --list master)) -gt 0
   git branch -D master
+  else; true
   end
 and git checkout --orphan master
 and git commit -m 'Boom!'
 and git push --set-upstream origin master
 and echo '…done.'
+or echo '…failed!'
 
-and echo 'Updating name and description…'
+echo 'Updating name and description…'
 and for file in package.json Readme.md
   sed --in-place \
     -e "s/<\!--name-->/$name/g" \
@@ -43,6 +45,10 @@ and for file in package.json Readme.md
   end
 and git commit -m 'Update name and description' package.json Readme.md
 and echo '…done.'
+or begin
+  echo '…failed!'
+  false
+  end
 
 and npm run _bootstrap
 
