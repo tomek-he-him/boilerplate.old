@@ -16,33 +16,9 @@ $ git clone git@github.com:tomekwi/boilerplate <my project name>
 ```
 
 
-2) Add your real remote:
-
-```sh
-$ cd <my project name>
-$ git remote rename origin boilerplate
-$ git remote add origin <my remote address>
-```
-
-
-3) Check out boilerplate files:
+2) Bootstrap:
 
 ```sh
 $ git checkout <boilerplate flavor – I normally go for `javascript`>
-```
-
-
-4) Squash the history into a single initial commit on a new `master` branch:
-
-```sh
-$ git branch -D master
-$ git checkout --orphan master
-$ git commit --message='Boom!'
-```
-
-
-5) Push your way through!
-
-```sh
-$ git push --set-upstream origin master
+$ ./_boilerplate.fish <name> <description> [<title> [<repo>]]
 ```
