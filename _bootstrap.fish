@@ -30,12 +30,12 @@ and if test (count (git branch --list master)) -gt 0
   end
 and git checkout --orphan master
 and git commit -m 'Boom!'
-and git push --set-upstream origin master
+and git branch --set-upstream-to=origin/master
 and echo '…done.'
 or echo '…failed!'
 
 echo 'Updating name and description…'
-and for file in package.json Readme.md
+for file in package.json Readme.md
   sed --in-place \
     -e "s/<\!--name-->/$name/g" \
     -e "s/<\!--description-->/$description/g" \
@@ -43,13 +43,21 @@ and for file in package.json Readme.md
     -e 's/<\!--title-underline-->/'(echo -n $title | sed s/./=/g)'/g' \
     $file
   end
+and git add --patch
 and git commit -m 'Update name and description' package.json Readme.md
 and echo '…done.'
-or begin
-  echo '…failed!'
-  false
-  end
+or echo '…failed!'
 
-and npm run _bootstrap
+echo 'Bootstrapping dependencies…'
+npm run _bootstrap
+and git add --patch
+and git commit -m 'Bootstrap dependencies'
+and echo '…done.'
+or echo '…failed!'
 
-and rm _bootstrap.fish
+echo 'Removing the bootstrap script…'
+rm _bootstrap.fish
+and git add --patch
+and git commit -m 'Remove the bootstrap script'
+and echo '…done.'
+or echo '…failed!'
