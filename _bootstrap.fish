@@ -21,7 +21,7 @@ if test -n $args[4]; set repo $args[4]
 else; set repo (echo git@github.com:tomekwi/$name)
 end
 
-echo '\nDoing the initial commit…'
+echo \n'Doing the initial commit…'
 git remote rename origin boilerplate
 and git remote add origin $repo
 and if test (count (git branch --list master)) -gt 0
@@ -33,7 +33,7 @@ and git commit -m 'Boom!'
 and echo '…done.'
 or echo '…failed!'
 
-echo '\nUpdating name and description…'
+echo \n'Updating name and description…'
 for file in package.json Readme.md
   sed --in-place \
     -e "s/<\!--name-->/$name/g" \
@@ -47,13 +47,13 @@ and git commit -m 'Update name and description' package.json Readme.md
 and echo '…done.'
 or echo '…failed!'
 
-echo '\nBootstrapping dependencies…'
+echo \n'Bootstrapping dependencies…'
 npm run _bootstrap
 and git commit -m 'Bootstrap dependencies' package.json
 and echo '…done.'
 or echo '…failed!'
 
-echo '\nRemoving the bootstrap script…'
+echo \n'Removing the bootstrap script…'
 git rm _bootstrap.fish
 and git commit -m 'Remove the bootstrap script'
 and echo '…done.'
