@@ -42,7 +42,7 @@ for file in package.json Readme.md
     -e "s/<\!--description-->/$description/g" \
     -e "s/<\!--title-->/$title/g" \
     -e 's/<\!--title-underline-->/'(echo -n $title | sed s/./=/g)'/g' \
-    -e "s/<\!--repo-->/$repo/g" \
+    -e "s|<\!--repo-->|$repo|g" \
     $file
   end
 and git add --patch
