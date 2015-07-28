@@ -23,7 +23,7 @@
 **<!--description-->**
 
 
-**⚠ Heads up!** This is totally a work in progress. [Thoughts and ideas][] are very welcome.
+**Heads up!** This is totally a work in progress. [Thoughts and ideas][] are very welcome.
 
 [Thoughts and ideas]:  https://github.com/tomekwi/<!--name-->/issues
 
