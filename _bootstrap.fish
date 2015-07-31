@@ -8,17 +8,15 @@ end
   exit 0
   end
 
-set args $argv $argv[1]
+set name $argv[1]
+set description $argv[2]
 
-set name $args[1]
-set description $args[2]
-
-if test -n $args[3]; set title $args[3]
-else; set title $name
+if test (count $argv) -lt 3; set title $name
+else; set title $argv[3]
 end
 
-if test -n $args[4]; set repo $args[4]
-else; set repo (echo git@github.com:tomekwi/$name)
+if test (count $argv) -lt 4; set repo "git@github.com:tomekwi/$name"
+else; set repo $argv[4]
 end
 
 echo \n'Doing the initial commit…'
