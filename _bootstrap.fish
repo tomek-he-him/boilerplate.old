@@ -23,7 +23,7 @@ end
 
 echo \n'Doing the initial commit…'
 git remote rename origin boilerplate
-and git remote add origin $repo
+git remote add origin $repo
 and if test (count (git branch --list master)) -gt 0
   git branch -D master
   else; true
