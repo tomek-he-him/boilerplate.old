@@ -56,3 +56,5 @@ git rm _bootstrap.fish
 and git commit -m 'Remove the bootstrap script'
 and echo '…done.'
 or echo '…failed!'
+
+echo \n'Done! Don’t forget to add some keywords to the `package.json`.'

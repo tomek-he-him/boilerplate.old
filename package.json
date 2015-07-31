@@ -25,9 +25,7 @@
     "/License.md"
   ],
   "license": "MIT",
-  "keywords": [
-    "<!--keywords-->"
-  ],
+  "keywords": [],
   "author": "Tomek Wiszniewski <t.wiszniewski@gmail.com>",
   "repository": {
     "type": "git",
