@@ -1,1 +1,2 @@
-const test = require('tape-catch');
+import './test/bin/<!--name-->.test';
+import './test/index.test';
