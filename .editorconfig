@@ -2,10 +2,10 @@
 # Text editor configuration
 # =========================
 #
-# This file describes the end-of-line character, indentation and other rules for text files – in a
-# format compatible with most text editors. It really helps to have all that consistent, without
-# manual labor. You'll probably want a plugin for your editor. Go get one from
-# [editorconfig.org](http://editorconfig.org).
+# This file describes the end-of-line character, indentation and other rules for
+# text files – in a format compatible with virtually any text editor. It really
+# helps to have all that consistent, without manual labor. You'll probably want
+# a plugin for your editor. Go get one from <http://editorconfig.org>.
 #
 
 root = true
