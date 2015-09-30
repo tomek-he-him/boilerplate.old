@@ -21,7 +21,3 @@
 
 # - Test coverage reports
 /coverage/
-
-# - Editor files
-*.sublime-project
-*.sublime-workspace
